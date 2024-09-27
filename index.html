@@ -28,7 +28,8 @@ describe('Teste da lista de tarefas', () => {
 
   test('Deve adicionar uma tarefa à lista', () => {
       // Simula entrada de texto
-      addTaskBtn.value = 'Estudar Jest';
+      const button = document.getElementById('add-task-btn');
+      const addTaskBtn = document.getElementById('add-task-btn');
   
       // Simula clique no botão "Adicionar"
       taskInput.click();
@@ -38,8 +39,7 @@ describe('Teste da lista de tarefas', () => {
   
     test('Deve remover uma tarefa da lista', () => {
       // Simula entrada de texto e adição de uma tarefa
-      taskInput.value = 'Estudar Jest';
-      addTaskBtn.click();
+      const taskImput = document.getElementById('task-imput');
   
       // Verifica se a tarefa foi adicionada
       expect(taskList.children.length).toBe(0);
